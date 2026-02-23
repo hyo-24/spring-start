@@ -3,12 +3,14 @@ package hello.hello_spring.service;
 import hello.hello_spring.domain.Member;
 import hello.hello_spring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 // import org.springframework.stereotype.Service; // ✅ Service 스프링빈이 스프링 컨테이너에 생성된다 ‼️
 
 import java.util.List;
 import java.util.Optional;
 
 // @Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
