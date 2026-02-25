@@ -18,6 +18,7 @@ public class MemberController {
     @Autowired // 스프링이 스프링 컨테이너에서 연관된 객체를 찾아 넣어줌. (아 이 스프링빈은 memberService 랑 연결해줘야겠네?)
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass()); // ➡️ 프록시 확인
     }
 
     @GetMapping(value = "/members/new")
